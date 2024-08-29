@@ -7,7 +7,11 @@ pessoas = [('Lisboa', 'LIS'),
 
 destino = 'FCO'
 
-voos = {('BRU', 'FCO') : ['15:44', '18:55', 382]}
+voos = {}
 
 for linha in open('C:/Users/nicol.DESKTOP-1V46I42/OneDrive/Documentos/Dev/optimization-algorithm/data/flights.txt'):
-    print(linha)
+    origem, fim, saida, chegada, preco = linha.split(',')
+    voos.setdefault((origem, fim), [])
+    voos[(origem,fim)].append((saida, chegada, int(preco)))
+
+print(voos)
