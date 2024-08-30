@@ -14,4 +14,4 @@ for linha in open('C:/Users/nicol.DESKTOP-1V46I42/OneDrive/Documentos/Dev/optimi
     voos.setdefault((origem, fim), [])
     voos[(origem,fim)].append((saida, chegada, int(preco)))
 
-print(voos)
+print(voos[('LIS','FCO')])
